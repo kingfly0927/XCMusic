@@ -117,7 +117,7 @@ export class Download {
    */
   async add(url: string, track: ITrack, downloadDir: string) {
     if (!window.electron?.isElectron) {
-      console.error("Not in desktop environment");
+      console.log(url);
       return;
     }
     if (this.downloading.some((item) => item.track.id === track.id)) {
